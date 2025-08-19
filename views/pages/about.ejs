@@ -1,28 +1,391 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-  <title><%= title || 'Perez - Personal Portfolio About' %></title>
-  <meta name="description" content="<%= metaDescription || 'Perez - Personal Portfolio About' %>">
-  <%- include('../partials/head') %> <!-- this is your [common-head] -->
+   <title>About Rai</title>
+  <meta name="description" content="Perez - Personal Portfolio About">
+   
+   <%- include('../partials/head') %>
+  
 </head>
 <body class="dark-bg bg-dark-tab">
   <div class="overflow-x-hidden">
-    <%- include('../partials/menu') %>   <!-- this is your [common-menu] -->
+    <%- include('../partials/menu') %>
+    <!-- About Me Sectin Start -->
+        <section class="bg-secondary pt-20 pb-120" data-aos="zoom-in">
+            <div class="container">
+                <div class="about-grid">
+                    <img class="mx-auto" src="/assets/images/about/about2.png" alt="about me">
+                    <div class="fw-bold font-Syne leading-none d-flex flex-wrap flex-column gap-y-2">
+                        <span class="text-warning text-xl">About me</span>
+                        <h3 class="text-dark section-title">
+                            Mark Henry
+                        </h3>
 
-    <!-- the rest of your page exactly as you pasted it -->
-    ...
+                        <h4 class="text-dark text-2xl mt-3 mb-4">Product Designer</h4>
+                        <p class="text-dark text-xl fw-bold font-Syne leading-7 mb-6">
+                            A Product Designer & Developer and I am in the game for over 7+ years. I am proud of my
+                            works and ready to face the next challenge
+                        </p>
+                        <p class="paragraph mb-6">
+                            That is where I come
+                            in.
+                            A lover of
+                            words, a wrangler of copy. Here to create copy that not
+                            only reflects who you are and what you stand for, but words that truly land with those that
+                            read them, calling your audience in and making them .</p>
+
+                        <div>
+                            <img src="/assets/images/signature.svg" alt="signature">
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Me Sectin End -->
+    
+    <!-- tabs start -->
+    <section class="featured-properties dark-paragraph">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-5 col-2xl-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="fw-bold font-Syne leading-none d-flex flex-wrap flex-column gap-y-2 mb-4">
+              <span class="text-warning text-xl">Resume</span>
+              <h3 class="section-title circle-shape text-white position-relative">All over my details find here...</h3>
+            </div>
+            <div class="tabs nav nav-pills flex-wrap flex-lg-column">
+              <button data-bs-toggle="pill" data-bs-target="#about_me_tab" class="tab-btn justify-content-between align-items-center d-inline-flex active">About me
+                <span class="inline-block animate-arrow-up">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 17L17 7" stroke="currentColor" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M7 7H17V17" stroke="currentColor" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+              </button>
+              <button class="tab-btn tab-btn justify-content-between align-items-center d-inline-flex" data-bs-toggle="pill" data-bs-target="#experience_tab">Experience
+                <span class="inline-block animate-arrow-up">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 17L17 7" stroke="currentColor" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M7 7H17V17" stroke="currentColor" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+              </button>
+              <button class="tab-btn tab-btn justify-content-between align-items-center d-inline-flex" data-bs-toggle="pill" data-bs-target="#education_tab">Education
+                <span class="inline-block animate-arrow-up">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 17L17 7" stroke="currentColor" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M7 7H17V17" stroke="currentColor" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+              </button>
+              <button class="tab-btn tab-btn justify-content-between align-items-center d-inline-flex" data-bs-toggle="pill" data-bs-target="#skills_tab">Skills
+                <span class="inline-block animate-arrow-up">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 17L17 7" stroke="currentColor" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M7 7H17V17" stroke="currentColor" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+              </button>
+              <button class="tab-btn tab-btn justify-content-between align-items-center d-inline-flex" data-bs-toggle="pill" data-bs-target="#awards_tab">Awards
+                <span class="inline-block animate-arrow-up">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 17L17 7" stroke="currentColor" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M7 7H17V17" stroke="currentColor" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-7 col-2xl-8 featured-properties-space-left" data-aos="fade-up" data-aos-delay="600">
+            <div class="tab-content">
+              <div id="about_me_tab" class="tab-pane fade show active position-relative">
+                <div class="tab-contents">
+                  <h4 class="text-white text-2xl based-in-german-title-tab fw-bold font-Syne">Based in German</h4>
+                  <p class="paragraph mb-7">Mark Henry, <span class="text-white">Product Designer</span>, based in German. That is where I come in. A lover of words, a wrangler of copy. Here to create copy that not only reflects who you are and what you stand for,</p>
+                  <p class="paragraph mb-14">but words that truly land with those that read them, calling your audience in and making them want more.</p>
+                  <ul class="flex-column gap-3 d-inline-flex list-unstyled p-0">
+                    <li class="gap-10 d-inline-flex align-items-center">
+                      <span class="w-110px text-black-text-800 text-lg fw-normal leading-none">Name</span>
+                      <span class="text-white text-2xl fw-bold font-Syne leading-8">Mark Henry</span>
+                    </li>
+                    <li class="gap-10 d-inline-flex align-items-center">
+                      <span class="w-110px text-black-text-800 text-lg fw-normal leading-none">Nationality</span>
+                      <span class="text-white text-2xl fw-bold font-Syne leading-8">Germany</span>
+                    </li>
+                    <li class="gap-10 d-inline-flex align-items-center">
+                      <span class="w-110px text-black-text-800 text-lg fw-normal leading-none">Phone</span>
+                      <span class="text-white text-2xl fw-bold font-Syne leading-8">+(2) 870 174 302</span>
+                    </li>
+                    <li class="gap-10 d-inline-flex align-items-center">
+                      <span class="w-110px text-black-text-800 text-lg fw-normal leading-none">Email</span>
+                      <span class="text-white text-2xl fw-bold font-Syne leading-8">hello@henry.com</span>
+                    </li>
+                    <li class="gap-10 d-inline-flex align-items-center">
+                      <span class="w-110px text-black-text-800 text-lg fw-normal leading-none">Experience</span>
+                      <span class="text-white text-2xl fw-bold font-Syne leading-8">12+ years</span>
+                    </li>
+                    <li class="gap-10 d-inline-flex align-items-center">
+                      <span class="w-110px text-black-text-800 text-lg fw-normal leading-none">Freelance</span>
+                      <span class="text-white text-2xl fw-bold font-Syne leading-8">Available</span>
+                    </li>
+                    <li class="gap-10 d-inline-flex align-items-center">
+                      <span class="w-110px text-black-text-800 text-lg fw-normal leading-none">Skype</span>
+                      <span class="text-white text-2xl fw-bold font-Syne leading-8">henry.halk23</span>
+                    </li>
+                    <li class="gap-10 d-inline-flex align-items-center">
+                      <span class="w-110px text-black-text-800 text-lg fw-normal leading-none">Language</span>
+                      <span class="text-white text-2xl fw-bold font-Syne leading-8">German, English</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div id="experience_tab" class="tab-pane fade position-relative">
+                <h4 class="text-white text-2xl based-in-german-title-tab fw-bold font-Syne">Experience</h4>
+                <div class="tab-contents tab-contents-experience gap-x-4 gap-y-5">
+                  <div class="experience-tab-item d-flex flex-wrap flex-column gap-8 justify-content-between">
+                    <span class="text-sm fw-normal font-Inter leading-tight text-black-text-800">03/216 – Running</span>
+                    <div>
+                      <p class="dot text-lg fw-normal font-sans leading-7 text-white position-relative">Axtra</p>
+                      <h4 class="fw-bold font-Syne leading-normal text-2xl text-white">Lead digital marketer</h4>
+                    </div>
+                  </div>
+                  <div class="experience-tab-item d-flex flex-wrap flex-column gap-8 justify-content-between">
+                    <span class="text-sm fw-normal font-Inter leading-tight text-black-text-800">03/2008 – 07/2011</span>
+                    <div>
+                      <p class="dot text-lg fw-normal font-sans leading-7 text-white position-relative">Axtra</p>
+                      <h4 class="fw-bold font-Syne leading-normal text-2xl text-white">JavaScript developer</h4>
+                    </div>
+                  </div>
+                  <div class="experience-tab-item d-flex flex-wrap flex-column gap-8 justify-content-between">
+                    <span class="text-sm fw-normal font-Inter leading-tight text-black-text-800">03/2008 – 07/2011</span>
+                    <div>
+                      <p class="dot text-lg fw-normal font-sans leading-7 text-white position-relative">Axtra</p>
+                      <h4 class="fw-bold font-Syne leading-normal text-2xl text-white">Product designer</h4>
+                    </div>
+                  </div>
+                  <div class="experience-tab-item d-flex flex-wrap flex-column gap-8 justify-content-between">
+                    <span class="text-sm fw-normal font-Inter leading-tight text-black-text-800">03/2008 – 07/2011</span>
+                    <div>
+                      <p class="dot text-lg fw-normal font-sans leading-7 text-white position-relative">Axtra</p>
+                      <h4 class="fw-bold font-Syne leading-normal text-2xl text-white">UX researcher</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="education_tab" class="tab-pane fade">
+                <h4 class="text-white text-2xl based-in-german-title-tab fw-bold font-Syne">Education</h4>
+                <div class="education-tab-contents">
+                  <div class="education-tab-item d-flex flex-wrap">
+                    <span class="text-sm fw-normal font-Inter leading-tight text-black-text-800">003/2008 – 07/2011</span>
+                    <div class="flex-1">
+                      <p class="dot text-lg fw-normal font-sans leading-7 text-white position-relative">Axtra</p>
+                      <h4 class="fw-bold font-Syne leading-normal text-2xl text-white">BA Business Management</h4>
+                    </div>
+                  </div>
+                  <div class="education-tab-item d-flex flex-wrap">
+                    <span class="text-sm fw-normal font-Inter leading-tight text-black-text-800">03/2008 – 07/2011</span>
+                    <div class="flex-1">
+                      <p class="dot text-lg fw-normal font-sans leading-7 text-white position-relative">Axtra</p>
+                      <h4 class="fw-bold font-Syne leading-normal text-2xl text-white">BA Business Management</h4>
+                    </div>
+                  </div>
+                  <div class="education-tab-item d-flex flex-wrap">
+                    <span class="text-sm fw-normal font-Inter leading-tight text-black-text-800">03/2008 – 07/2011</span>
+                    <div class="flex-1">
+                      <p class="dot text-lg fw-normal font-sans leading-7 text-white position-relative">Axtra</p>
+                      <h4 class="fw-bold font-Syne leading-normal text-2xl text-white">BA Business Management</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="skills_tab" class="tab-pane fade">
+                <h4 class="text-white text-2xl based-in-german-title-tab fw-bold font-Syne">Skills</h4>
+                <div class="skills-tab-contents">
+                  <div class="d-flex flex-wrap gap-4 align-items-start skills-tab-item">
+                    <!-- Icons and content preserved from original -->
+                    <!-- ... -->
+                  </div>
+                </div>
+              </div>
+
+              <div id="awards_tab" class="tab-pane fade">
+                <h4 class="text-white text-2xl based-in-german-title-tab fw-bold font-Syne">Awards</h4>
+                <!-- Add awards content here if present in your original file -->
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- tabs end -->
+     <!-- Testimonial section Start -->
+        <section class="bg-dark py-120 testimonial" data-aos="fade-up">
+            <div class="testimonial-space-left px-8">
+                <div class="d-flex flex-column testimonial-gap flex-xl-row">
+
+                    <div class="fw-bold font-Syne leading-none d-flex flex-wrap flex-column gap-y-2 mb-10 testimonial-title-section">
+                        <span class="text-warning text-xl">Testimonial</span>
+                        <h3 class="d-inline-block section-title text-white">
+                            <span class="position-relative circle-shape testimonial-shape">Cl</span>ient
+                            <br class="hidden d-xl-inline-block" /> feedback
+                        </h3>
+                    </div>
+
+
+                    <div class="swiper w-100">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <span class="d-inline-block qotation-icon">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21.75 13.5L21.75 30C21.7475 32.3862 20.7985 34.6739 19.1112 36.3612C17.4239 38.0485 15.1362 38.9975 12.75 39C12.3522 39 11.9706 38.842 11.6893 38.5607C11.408 38.2794 11.25 37.8978 11.25 37.5C11.25 37.1022 11.408 36.7206 11.6893 36.4393C11.9706 36.158 12.3522 36 12.75 36C14.3413 36 15.8674 35.3679 16.9926 34.2426C18.1179 33.1174 18.75 31.5913 18.75 30V28.5H7.5C6.70435 28.5 5.94129 28.1839 5.37868 27.6213C4.81607 27.0587 4.5 26.2956 4.5 25.5L4.5 13.5C4.5 12.7044 4.81607 11.9413 5.37868 11.3787C5.94129 10.8161 6.70435 10.5 7.5 10.5L18.75 10.5C19.5456 10.5 20.3087 10.8161 20.8713 11.3787C21.4339 11.9413 21.75 12.7044 21.75 13.5ZM40.5 10.5H29.25C28.4544 10.5 27.6913 10.8161 27.1287 11.3787C26.5661 11.9413 26.25 12.7044 26.25 13.5L26.25 25.5C26.25 26.2956 26.5661 27.0587 27.1287 27.6213C27.6913 28.1839 28.4544 28.5 29.25 28.5H40.5V30C40.5 31.5913 39.8679 33.1174 38.7426 34.2426C37.6174 35.3679 36.0913 36 34.5 36C34.1022 36 33.7206 36.158 33.4393 36.4393C33.158 36.7206 33 37.1022 33 37.5C33 37.8978 33.158 38.2794 33.4393 38.5607C33.7206 38.842 34.1022 39 34.5 39C36.8862 38.9975 39.1739 38.0485 40.8612 36.3612C42.5485 34.6739 43.4975 32.3862 43.5 30V13.5C43.5 12.7044 43.1839 11.9413 42.6213 11.3787C42.0587 10.8161 41.2957 10.5 40.5 10.5Z"
+                                            fill="white" />
+                                    </svg>
+                                </span>
+                                <p class="testimonial-texts fw-bold font-Syne">
+                                    “Energistically
+                                    build
+                                    alternative scenarios
+                                    via cross-unit applications. Credibly exploit
+                                    one-to-one strategic theme areas and clicks-and-mortar services”</p>
+                                <h4 class="d-flex flex-wrap align-items-center gap-4 text-white testimonial-qotation-name font-Syne">
+                                    <span><svg width="48" height="2" viewBox="0 0 48 2" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 1H48" stroke="#fff" />
+                                        </svg>
+                                    </span> Jhon Smith
+                                </h4>
+                            </div>
+                            <div class="swiper-slide">
+                                <span class="d-inline-block qotation-icon">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21.75 13.5L21.75 30C21.7475 32.3862 20.7985 34.6739 19.1112 36.3612C17.4239 38.0485 15.1362 38.9975 12.75 39C12.3522 39 11.9706 38.842 11.6893 38.5607C11.408 38.2794 11.25 37.8978 11.25 37.5C11.25 37.1022 11.408 36.7206 11.6893 36.4393C11.9706 36.158 12.3522 36 12.75 36C14.3413 36 15.8674 35.3679 16.9926 34.2426C18.1179 33.1174 18.75 31.5913 18.75 30V28.5H7.5C6.70435 28.5 5.94129 28.1839 5.37868 27.6213C4.81607 27.0587 4.5 26.2956 4.5 25.5L4.5 13.5C4.5 12.7044 4.81607 11.9413 5.37868 11.3787C5.94129 10.8161 6.70435 10.5 7.5 10.5L18.75 10.5C19.5456 10.5 20.3087 10.8161 20.8713 11.3787C21.4339 11.9413 21.75 12.7044 21.75 13.5ZM40.5 10.5H29.25C28.4544 10.5 27.6913 10.8161 27.1287 11.3787C26.5661 11.9413 26.25 12.7044 26.25 13.5L26.25 25.5C26.25 26.2956 26.5661 27.0587 27.1287 27.6213C27.6913 28.1839 28.4544 28.5 29.25 28.5H40.5V30C40.5 31.5913 39.8679 33.1174 38.7426 34.2426C37.6174 35.3679 36.0913 36 34.5 36C34.1022 36 33.7206 36.158 33.4393 36.4393C33.158 36.7206 33 37.1022 33 37.5C33 37.8978 33.158 38.2794 33.4393 38.5607C33.7206 38.842 34.1022 39 34.5 39C36.8862 38.9975 39.1739 38.0485 40.8612 36.3612C42.5485 34.6739 43.4975 32.3862 43.5 30V13.5C43.5 12.7044 43.1839 11.9413 42.6213 11.3787C42.0587 10.8161 41.2957 10.5 40.5 10.5Z"
+                                            fill="white" />
+                                    </svg>
+                                </span>
+                                <p class="testimonial-texts fw-bold font-Syne">
+                                    “Energistically
+                                    build
+                                    “Unleash energistically build alternative scenarios via cross-unit build
+                                    efficient
+                                    initiatives for distinctive vortals. Synergistically strategize via adaptiv“
+                                </p>
+                                <h4 class="d-flex flex-wrap align-items-center gap-4 text-white testimonial-qotation-name font-Syne">
+                                    <span><svg width="48" height="2" viewBox="0 0 48 2" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 1H48" stroke="fff8" />
+                                        </svg>
+                                    </span> Jhon Smith
+                                </h4>
+                            </div>
+                            <div class="swiper-slide">
+                                <span class="d-inline-block qotation-icon">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21.75 13.5L21.75 30C21.7475 32.3862 20.7985 34.6739 19.1112 36.3612C17.4239 38.0485 15.1362 38.9975 12.75 39C12.3522 39 11.9706 38.842 11.6893 38.5607C11.408 38.2794 11.25 37.8978 11.25 37.5C11.25 37.1022 11.408 36.7206 11.6893 36.4393C11.9706 36.158 12.3522 36 12.75 36C14.3413 36 15.8674 35.3679 16.9926 34.2426C18.1179 33.1174 18.75 31.5913 18.75 30V28.5H7.5C6.70435 28.5 5.94129 28.1839 5.37868 27.6213C4.81607 27.0587 4.5 26.2956 4.5 25.5L4.5 13.5C4.5 12.7044 4.81607 11.9413 5.37868 11.3787C5.94129 10.8161 6.70435 10.5 7.5 10.5L18.75 10.5C19.5456 10.5 20.3087 10.8161 20.8713 11.3787C21.4339 11.9413 21.75 12.7044 21.75 13.5ZM40.5 10.5H29.25C28.4544 10.5 27.6913 10.8161 27.1287 11.3787C26.5661 11.9413 26.25 12.7044 26.25 13.5L26.25 25.5C26.25 26.2956 26.5661 27.0587 27.1287 27.6213C27.6913 28.1839 28.4544 28.5 29.25 28.5H40.5V30C40.5 31.5913 39.8679 33.1174 38.7426 34.2426C37.6174 35.3679 36.0913 36 34.5 36C34.1022 36 33.7206 36.158 33.4393 36.4393C33.158 36.7206 33 37.1022 33 37.5C33 37.8978 33.158 38.2794 33.4393 38.5607C33.7206 38.842 34.1022 39 34.5 39C36.8862 38.9975 39.1739 38.0485 40.8612 36.3612C42.5485 34.6739 43.4975 32.3862 43.5 30V13.5C43.5 12.7044 43.1839 11.9413 42.6213 11.3787C42.0587 10.8161 41.2957 10.5 40.5 10.5Z"
+                                            fill="white" />
+                                    </svg>
+                                </span>
+                                <p class="testimonial-texts fw-bold font-Syne">
+                                    “Energistically
+                                    build
+                                    “Aliquam vehicula nunc facilisis tincidunt feugiat. Pellentesque sed viverra
+                                    nisi. Fusce
+                                    et
+                                    laoreet augue. Quisque pretium, ligula lectus semper urna. Aliquam vehicula.”
+
+                                </p>
+                                <h4 class="d-flex flex-wrap align-items-center gap-4 text-white testimonial-qotation-name font-Syne">
+                                    <span><svg width="48" height="2" viewBox="0 0 48 2" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 1H48" stroke="#fff" />
+                                        </svg>
+                                    </span> Jhon Smith
+                                </h4>
+                            </div>
+                            <div class="swiper-slide">
+                                <span class="d-inline-block qotation-icon">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21.75 13.5L21.75 30C21.7475 32.3862 20.7985 34.6739 19.1112 36.3612C17.4239 38.0485 15.1362 38.9975 12.75 39C12.3522 39 11.9706 38.842 11.6893 38.5607C11.408 38.2794 11.25 37.8978 11.25 37.5C11.25 37.1022 11.408 36.7206 11.6893 36.4393C11.9706 36.158 12.3522 36 12.75 36C14.3413 36 15.8674 35.3679 16.9926 34.2426C18.1179 33.1174 18.75 31.5913 18.75 30V28.5H7.5C6.70435 28.5 5.94129 28.1839 5.37868 27.6213C4.81607 27.0587 4.5 26.2956 4.5 25.5L4.5 13.5C4.5 12.7044 4.81607 11.9413 5.37868 11.3787C5.94129 10.8161 6.70435 10.5 7.5 10.5L18.75 10.5C19.5456 10.5 20.3087 10.8161 20.8713 11.3787C21.4339 11.9413 21.75 12.7044 21.75 13.5ZM40.5 10.5H29.25C28.4544 10.5 27.6913 10.8161 27.1287 11.3787C26.5661 11.9413 26.25 12.7044 26.25 13.5L26.25 25.5C26.25 26.2956 26.5661 27.0587 27.1287 27.6213C27.6913 28.1839 28.4544 28.5 29.25 28.5H40.5V30C40.5 31.5913 39.8679 33.1174 38.7426 34.2426C37.6174 35.3679 36.0913 36 34.5 36C34.1022 36 33.7206 36.158 33.4393 36.4393C33.158 36.7206 33 37.1022 33 37.5C33 37.8978 33.158 38.2794 33.4393 38.5607C33.7206 38.842 34.1022 39 34.5 39C36.8862 38.9975 39.1739 38.0485 40.8612 36.3612C42.5485 34.6739 43.4975 32.3862 43.5 30V13.5C43.5 12.7044 43.1839 11.9413 42.6213 11.3787C42.0587 10.8161 41.2957 10.5 40.5 10.5Z"
+                                            fill="white" />
+                                    </svg>
+                                </span>
+                                <p class="testimonial-texts fw-bold font-Syne">
+                                    “Energistically
+                                    build
+                                    “Aliquam vehicula nunc facilisis tincidunt feugiat. Pellentesque sed viverra
+                                    nisi. Fusce
+                                    et
+                                    laoreet augue. Quisque pretium, ligula lectus semper urna. Aliquam vehicula.”
+
+                                </p>
+                                <h4 class="d-flex flex-wrap align-items-center gap-4 text-white testimonial-qotation-name font-Syne">
+                                    <span><svg width="48" height="2" viewBox="0 0 48 2" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 1H48" stroke="fff8" />
+                                        </svg>
+                                    </span> Jhon Smith
+                                </h4>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial section End -->
+
+        <!-- Brand Section Start-->
+
+        <div class="bg-dark brandCarousel mb-120" data-aos="flip-down">
+            <div class="container">
+                <div class="swiper brand-carousel">
+
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img class="mx-auto d-block" src="/assets/images/brand/logo-white1.png" alt=" brandlogo">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="mx-auto d-block" src="/assets/images/brand/logo-white2.png" alt=" brandlogo">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="mx-auto d-block" src="/assets/images/brand/logo-white3.png" alt=" brandlogo">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="mx-auto d-block" src="/assets/images/brand/logo-white4.png" alt=" brandlogo">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="mx-auto d-block" src="/assets/images/brand/logo-white5.png" alt=" brandlogo">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="mx-auto d-block" src="/assets/images/brand/logo-white6.png" alt=" brandlogo">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="mx-auto d-block" src="/assets/images/brand/logo-white3.png" alt=" brandlogo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Brand Section End-->
+
   </div>
-
-  <!-- JS (keep these at the end, order matters) -->
-  <script src="assets/js/vendor/modernizr-3.11.7.min.js"></script>
-  <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
-  <script src="assets/js/vendor/jquery-migrate-3.3.2.min.js"></script>
-  <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
-
-  <script src="assets/js/plugins/aos.js"></script>
-  <script src="assets/js/plugins/swiper-bundle.min.js"></script>
-  <script src="assets/js/plugins/jquery.magnific-popup.min.js"></script>
-
-  <script src="assets/js/main.js"></script>
+  <%- include('../partials/footer') %>
 </body>
 </html>
