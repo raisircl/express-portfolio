@@ -28,13 +28,13 @@ app.use('/', siteRoutes);
 
 // 404
 app.use((req, res) => {
-  res.status(404).render('pages/index', { title: '404', page: '404', error: 'Page not found' });
+  res.status(404).render('pages/404', { title: '404', page: '404', error: 'Page not found' });
 });
 
 // Error handler
 app.use((err, req, res, next) => {
   console.error('Unhandled error:', err);
-  res.status(500).render('pages/index', { title: 'Error', page: 'error', error: 'Something went wrong' });
+  res.status(500).render('pages/404', { title: 'Error', page: 'error', error: 'Something went wrong' });
 });
 
 const PORT = process.env.PORT || 3600;
