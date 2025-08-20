@@ -13,14 +13,14 @@ exports.contact = (req, res) => renderPage(res, 'contact', 'Contact');
 exports.projects = (req, res) => renderPage(res, 'projects', 'Projects');
 exports.projectDetails = (req, res) => renderPage(res, 'project-details', 'Project Details');
 
-exports.submitContact = async (req, res, next) => {
+ exports.submitContact = async (req, res, next) => {
   try {
     const { name, email, subject, message } = req.body;
 
     // Basic validation (can add express-validator later)
-    if (!name || !email || !message) {
-      return res.status(400).json({ ok: false, error: 'Name, email, and message are required.' });
-    }
+    // if (!name || !email || !message) {
+    //   return res.status(400).json({ ok: false, error: 'Name, email, and message are required.' });
+    // }
 
     // // Save to Postgres
     // const insertSql = `
@@ -38,15 +38,17 @@ exports.submitContact = async (req, res, next) => {
             auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS } }
     );
 
-    await transporter.sendMail({
+    const send_mail = {
       from: process.env.SMTP_USER,
       to: email,
       subject: subject || 'Thanks for reaching out!',
       html: `<p>Hi ${name},</p><p>Thanks for contacting us. Our team will get back to you soon.</p><p>— Portfolio Team</p>`
-    });
-    return res.json({ ok: true, msg:'mail sent successfuly.'});
+    }
+
+    await transporter.sendMail(send_mail)
+    return res.render('pages/thanks',{title:'thank you'})
+    // return res.json({ ok: true, msg:'mail sent successfuly.'});
     //return res.json({ ok: true, id: result.rows[0].id, created_at: result.rows[0].created_at });
   } catch (err) {
     return next(err);
-  }
-};
+  }};
