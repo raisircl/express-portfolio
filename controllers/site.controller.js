@@ -46,7 +46,7 @@ exports.projectDetails = (req, res) => renderPage(res, 'project-details', 'Proje
     }
 
     await transporter.sendMail(send_mail)
-    return res.render('pages/thanks',{title:'thank you'})
+    return res.render('pages/thank',{title:'thank you'})
     // return res.json({ ok: true, msg:'mail sent successfuly.'});
     //return res.json({ ok: true, id: result.rows[0].id, created_at: result.rows[0].created_at });
   } catch (err) {
