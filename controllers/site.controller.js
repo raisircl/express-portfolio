@@ -1,6 +1,17 @@
 const nodemailer = require('nodemailer');
 const { pool } = require('../db');
+const { MongoClient, ServerApiVersion } = require('mongodb');
 
+
+const uri = `mongodb+srv://codetestst:${process.env.PWD}@cluster-st-codetest.u9esacd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster-ST-CodeTest`;
+// Create a MongoClient with a MongoClientOptions object to set the Stable API version
+const client = new MongoClient(uri, {
+  serverApi: {
+    version: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true,
+  }
+});
 function renderPage(res, viewName, title) {
   return res.render(`pages/${viewName}`, { title, page: viewName });
 }
@@ -15,8 +26,27 @@ exports.projectDetails = (req, res) => renderPage(res, 'project-details', 'Proje
 
  exports.submitContact = async (req, res, next) => {
   try {
-    const { name, email, subject, message } = req.body;
+          const { name, email, subject, message } = req.body;
+          var currentdate = new Date(); 
+          var datetime = "Last Sync: " + currentdate.getDate() + "/"
+                          + (currentdate.getMonth()+1)  + "/" 
+                          + currentdate.getFullYear() + " @ "  
+                          + currentdate.getHours() + ":"  
+                          + currentdate.getMinutes() + ":" 
+                          + currentdate.getSeconds();
+          const data={name:name,email:email,subject:subject, message:message,addon:datetime}
+            // Connect the client to the server	(optional starting in v4.7)
+            client.connect();
+            // Send a ping to confirm a successful connection
+            client.db("portfolioDB").command({ ping: 1 });
 
+            console.log("Pinged your deployment. You successfully connected to MongoDB!");
+            const myDB = client.db("portfolioDB");
+            const myColl = myDB.collection("contactUsData");
+            const result = myColl.insertOne(data);
+            console.log(
+            `A document was inserted with the _id: ${result.insertedId}`,
+            );
     // Basic validation (can add express-validator later)
     // if (!name || !email || !message) {
     //   return res.status(400).json({ ok: false, error: 'Name, email, and message are required.' });
