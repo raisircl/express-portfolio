@@ -1,7 +1,15 @@
 const nodemailer = require('nodemailer');
-const { pool } = require('../db');
+const path = require('path');
+// const { pool } = require('../db');
+const {MongoClient} = require('mongodb');
+const crypto = require('crypto');
 
-function renderPage(res, viewName, title) {
+const ejs = require('ejs');
+
+const uri = process.env.URI;
+const client = new MongoClient(uri);
+function renderPage(res, viewName, title) {  
+   
   return res.render(`pages/${viewName}`, { title, page: viewName });
 }
 
@@ -13,22 +21,27 @@ exports.contact = (req, res) => renderPage(res, 'contact', 'Contact');
 exports.projects = (req, res) => renderPage(res, 'projects', 'Projects');
 exports.projectDetails = (req, res) => renderPage(res, 'project-details', 'Project Details');
 
- exports.submitContact = async (req, res, next) => {
+exports.submitContact = async (req, res, next) => {
   try {
-    const { name, email, subject, message } = req.body;
+    var time = new Date();
+    const date_time = time.toLocaleString(); 
 
-    // Basic validation (can add express-validator later)
-    // if (!name || !email || !message) {
-    //   return res.status(400).json({ ok: false, error: 'Name, email, and message are required.' });
-    // }
+   const {FirstName,LastName,email,Password,phone  } = req.body;
+   
+    const ticketid = "TIC"+'-'+Date.now()+'-'+crypto.randomBytes(2).toString('hex').toUpperCase();
 
-    // // Save to Postgres
-    // const insertSql = `
-    //   INSERT INTO contact_messages (name, email, subject, message)
-    //   VALUES ($1, $2, $3, $4)
-    //   RETURNING id, created_at
-    // `;
-    // const result = await pool.query(insertSql, [name, email, subject || null, message]);
+    const data ={FirstName:FirstName,LastName:LastName,email:email,password:Password,phone:phone,addon:date_time,tckid:ticketid}
+
+
+        await client.connect();
+        await client.db('portfolio').command({ping:1});
+        console.log(" success full connected");
+        
+        const mydb = client.db('portfolio');
+        const mycollection = mydb.collection('user');
+        const result =mycollection.insertOne(data);
+        console.log(` succes full ${(await result).insertedId}`);
+        console.log(result);
 
     // Send email
     const transporter = nodemailer.createTransport(
@@ -38,17 +51,19 @@ exports.projectDetails = (req, res) => renderPage(res, 'project-details', 'Proje
             auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS } }
     );
 
+     const dir = path.join(__dirname,"../views/pages/email-template.ejs");
+     const render =await ejs.renderFile(dir,{title:"thanks"});
+
     const send_mail = {
       from: process.env.SMTP_USER,
       to: email,
-      subject: subject || 'Thanks for reaching out!',
-      html: `<p>Hi ${name},</p><p>Thanks for contacting us. Our team will get back to you soon.</p><p>— Portfolio Team</p>`
-    }
+      subject:'Thanks for reaching out!,'+'-'+subject,  
+      text : "hello",  
+      html: render
+     }
 
     await transporter.sendMail(send_mail)
     return res.render('pages/thank',{title:'thank you'})
-    // return res.json({ ok: true, msg:'mail sent successfuly.'});
-    //return res.json({ ok: true, id: result.rows[0].id, created_at: result.rows[0].created_at });
   } catch (err) {
     return next(err);
   }};

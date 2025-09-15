@@ -95,38 +95,34 @@
                         <form id="contact-form" action="/submit-contact" method="POST" class="row">
                             <div class="col-12 col-md-6">
                                 <label class="text-sm fw-normal font-Inter leading-tight mb-3 d-block"
-                                    for="name">Name</label>
+                                    for="FirstName">FirstName</label>
                                 <input id="name" class="fw-normal w-full leading-7 contact-form-control text-white" type="text"
-                                    placeholder="Your name*" name="name">
+                                    placeholder="FirstName" name="FirstName">
+                            </div>                            
+                            <div class="col-12 col-md-6">
+                                <label class="text-sm fw-normal font-Inter leading-tight mb-3 d-block"
+                                    for="LastName">LastName</label>
+                                <input id="name" class="fw-normal w-full leading-7 contact-form-control text-white" type="text"
+                                    placeholder="LastName" name="LastName">
                             </div>
                             <div class="col-12 col-md-6">
                                 <label class="text-sm fw-normal font-Inter leading-tight mb-3 d-block"
                                     for="Email">Email</label>
                                 <input id="Email" class="fw-normal w-full leading-7 contact-form-control text-white" type="email"
-                                    placeholder="Your email*" name="email">
+                                    placeholder="Your email*" name="email" required>
                             </div>
                             <div class="col-12 col-md-6">
                                 <label class="text-sm fw-normal font-Inter leading-tight mb-3 d-block"
                                     for="Phone">Phone</label>
-                                <input id="Phone" class="fw-normal w-full leading-7 contact-form-control text-white" type="text"
+                                <input id="Phone" class="fw-normal w-full leading-7 contact-form-control text-white" type="tel"
                                     placeholder="Your number" name="phone">
                             </div>
-                            <div class="col-12 col-md-6">
-                                <label class="text-sm fw-normal font-Inter leading-tight mb-3 d-block"
-                                    for="Subject">Subject*</label>
-                                <input id="Subject" class="fw-normal w-full leading-7 contact-form-control  text-white" type="text"
-                                    placeholder="Your subject*" name="subject">
-                            </div>
-
                             <div class="col-12">
                                 <label class="text-sm fw-normal font-Inter leading-tight mb-3 d-block"
-                                    for="Message">Message</label>
-                                <textarea class="fw-normal w-full contact-form-control resize-none text-white" name="message"
-                                   
-                             id="Message" cols="30" rows="10" placeholder="Type your message"></textarea>
+                                    for="Password">Password</label>
+                                <input id="Password" class="fw-normal w-full leading-7 contact-form-control  text-white" type="password"
+                                    placeholder="Password*" name="Password" required>
                             </div>
-
-
                             <div class="col-12">
                                 <button class="d-flex align-items-center flex-wrap btn-primary" type="submit">Submit
                                     <span class="d-inline-block ml-3 animate-arrow-up">

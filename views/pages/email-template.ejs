@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Portfolio Email</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f8;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+      max-width: 600px;
+      background: #ffffff;
+      border-radius: 8px;
+      margin: 20px auto;
+      overflow: hidden;
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(90deg, #1f2937, #4b5563);
+      padding: 20px;
+      color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .header p {
+      margin: 6px 0 0;
+      font-size: 13px;
+      color: #d1d5db;
+    }
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #ffffff22;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    /* Hero */
+    .hero {
+      background: #eef2ff;
+      padding: 30px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .hero img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #111827;
+    }
+
+    .hero-text {
+      max-width: 350px;
+    }
+
+    .hero-text h2 {
+      margin: 0;
+      font-size: 22px;
+      color: #1f2937;
+    }
+
+    .hero-text p {
+      margin: 12px 0 18px;
+      font-size: 15px;
+      line-height: 22px;
+      color: #475569;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #111827;
+      color: #ffffff;
+      font-size: 14px;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    /* Projects */
+    .section-title {
+      font-size: 18px;
+      color: #0f172a;
+      margin: 20px;
+    }
+
+    .project {
+      display: flex;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      margin: 0 20px 12px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .project img {
+      width: 160px;
+      display: block;
+      border-radius: 6px;
+      margin: 12px;
+    }
+
+    .project-info {
+      padding: 12px;
+      flex: 1;
+    }
+
+    .project-info strong {
+      font-size: 14px;
+      color: #0f172a;
+    }
+
+    .project-info p {
+      margin: 6px 0 8px;
+      font-size: 13px;
+      line-height: 18px;
+      color: #475569;
+    }
+
+    .project-info small {
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    /* Footer */
+    .footer {
+      background: #0f172a;
+      color: #9ca3af;
+      padding: 16px 20px;
+      font-size: 12px;
+    }
+
+    .footer a {
+      color: #cbd5e1;
+      text-decoration: none;
+    }
+
+    .footer small {
+      display: block;
+      margin-top: 6px;
+      color: #6b7280;
+      font-size: 11px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <div class="header">
+      <div>
+        <h1>Mohit Verma's Portfolio</h1>
+        <p>Full Stack Developer • HTML • CSS • JavaScript • Node.js • Express.js • MongoDB</p>
+      </div>
+      <div class="logo">Mohit</div>
+    </div>
+
+    <!-- Hero Section with Photo -->
+    <div class="hero">
+      <img src="/public/assets/images/mypic.jpg" alt="Mohit Verma">
+      <div class="hero-text">
+        <h2>Hello, I'm Mohit 👋</h2>
+        <p>I'm a Full Stack Developer passionate about building modern, responsive, and user-friendly web applications.</p>
+        <a href="https://github.com/Mohit-0007" class="btn">View My Work</a>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <h3 class="section-title">Highlighted Projects</h3>
+
+    <div class="project">
+      <img src="/public/assets/images/salon.png" alt="Salon Website">
+      <div class="project-info">
+        <strong>The Crown Chair — Salon Website</strong>
+        <p>A modern responsive salon website with booking system, custom fonts, and a clean UI.</p>
+        <small>Tech: HTML • CSS • Responsive</small>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="/public/assets/images/portfolio.png" alt="Portfolio Clone">
+      <div class="project-info">
+        <strong>Personal Portfolio Clone</strong>
+        <p>A stylish portfolio template featuring projects, skills, and a contact section.</p>
+        <small>Tech: HTML • CSS • EJS-ready</small>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="/public/assets/images/deshbord.png" alt="Dashboard UI">
+      <div class="project-info">
+        <strong>Dashboard UI Concepts</strong>
+        <p>UI/UX concept designs for an email dashboard with Gmail integration.</p>
+        <small>Tech: HTML • CSS • Concept</small>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>© 2025 Mohit Verma | Full Stack Developer</p>
+      <p>Email: <a href="#">mohitvrma02@gmail.com</a></p>
+    </div>
+
+  </div>
+</body>
+</html>
